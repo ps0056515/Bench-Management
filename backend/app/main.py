@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import bench, demand, match
+from app.routes import skill_gap
 
 app = FastAPI()
 
@@ -15,3 +16,4 @@ app.add_middleware(
 app.include_router(bench.router)
 app.include_router(demand.router)
 app.include_router(match.router)
+app.include_router(skill_gap.router)
